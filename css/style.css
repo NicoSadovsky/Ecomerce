@@ -1,0 +1,70 @@
+/* general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(185, 182, 182);
+}
+
+main {
+    text-align: center;
+}
+
+/* nav */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+}
+
+/* tarjetas */
+.productos {
+    width: 200px;
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.productos img {
+    width: 100%;
+    height: auto;
+}
+
+.productos h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.productos p {
+    margin: 5px 0;
+}
+
+/* footer */
+.footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer p {
+    color: #fff;
+    text-decoration: none;
+}
