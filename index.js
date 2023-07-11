@@ -2,6 +2,8 @@
 
 let nombreUsuario = prompt('Ingrese su nombre ')
 let bienvenidaPagina = prompt('Bienvenido ' + nombreUsuario + ' ,que esta buscando, velas, difusores o home spay?')
+
+
 if ((bienvenidaPagina === 'velas') || (bienvenidaPagina === 'Velas') || (bienvenidaPagina === 'vela') || (bienvenidaPagina === 'Vela')) {
 
     console.log('hoy las velas tienen un 20% de descuento')
@@ -24,7 +26,37 @@ if ((bienvenidaPagina === 'velas') || (bienvenidaPagina === 'Velas') || (bienven
     console.log("Precio con descuento: $" + precioConDescuento);
     console.log('Bienvenido a Fiore di loto')
 
-} 
+
+const productos = ["Velas Madera", "Vela Vaso", "Vela Bubble"];
+const precios = [1500, 1500, 1950];
+
+function obtenerPrecio(productoElegido) {
+    const indice = productos.indexOf(productoElegido);
+
+    if (indice !== -1) {
+        return precios[indice];
+    } else {
+        return null;
+    }
+}
+
+
+    const productoElegido = prompt(
+        "Que tipo de vela :\n1. Velas Madera \n2. Vela Vaso \n3. Vela Bubble"
+    );
+    
+    // Obtener el precio del producto elegido
+    const precio = obtenerPrecio(productos[productoElegido - 1]);
+    
+    // Mostrar el precio en la consola
+    if (precio !== null) {
+        console.log(`El precio de ${productos[productoElegido - 1]} es: $${precio}`);
+    } else {
+        console.log("Producto inválido");
+    }
+    
+
+}
 
 if ((bienvenidaPagina === 'difusores') || (bienvenidaPagina === 'Difusores') || (bienvenidaPagina === 'difusor') || (bienvenidaPagina === 'Difusor')) {
 
@@ -48,7 +80,35 @@ if ((bienvenidaPagina === 'difusores') || (bienvenidaPagina === 'Difusores') || 
     console.log("Precio con descuento: $" + precioConDescuento);
     console.log('Bienvenido a Fiore di loto')
 
-} 
+
+    const productos = ["Difusor 125ml", "Difusor 250ml"];
+const precios = [1500, 2400];
+
+function obtenerPrecio(productoElegido) {
+    const indice = productos.indexOf(productoElegido);
+
+    if (indice !== -1) {
+        return precios[indice];
+    } else {
+        return null;
+    }
+}
+
+    const productoElegido = prompt(
+        "Que tipo de vela :\n1. Difusor 125ml \n2. Difusor 250ml"
+    );
+    
+    
+    const precio = obtenerPrecio(productos[productoElegido - 1]);
+    
+    
+    if (precio !== null) {
+        console.log(`El precio de ${productos[productoElegido - 1]} es: $${precio}`);
+    } else {
+        console.log("Producto inválido");
+    }
+    
+}
 
 if ((bienvenidaPagina === 'home spray') || (bienvenidaPagina === 'Home spray') || (bienvenidaPagina === 'spray') || (bienvenidaPagina === 'home')) {
     console.log('hoy los home spray tienen un 25% de descuento')
@@ -78,23 +138,23 @@ if ((bienvenidaPagina === 'home spray') || (bienvenidaPagina === 'Home spray') |
 //Calculadora de productos a futuro (en este caso llevaria 2 velas...)
 
 
-if ((bienvenidaPagina === 'velas') || (bienvenidaPagina === 'Velas') || (bienvenidaPagina === 'vela') || (bienvenidaPagina === 'Vela')) {
+// if ((bienvenidaPagina === 'velas') || (bienvenidaPagina === 'Velas') || (bienvenidaPagina === 'vela') || (bienvenidaPagina === 'Vela')) {
 
-function calculadoraProductos(numero1, numero2, operacion) {
-    switch (operacion) {
-        case '+':
-            return numero1 + numero2
-            break
-        case '*':
-            return numero1 * numero2
-            break
-        default:
-            return 'debe definir una operacion como + o *'
-            break
-    }
-}
+//     function calculadoraProductos(numero1, numero2, operacion) {
+//         switch (operacion) {
+//             case '+':
+//                 return numero1 + numero2
+//                 break
+//             case '*':
+//                 return numero1 * numero2
+//                 break
+//             default:
+//                 return 'debe definir una operacion como + o *'
+//                 break
+//         }
+//     }
 
-let resultado = calculadoraProductos(1500, 2, '*')
+//     let resultado = calculadoraProductos(1500, 2, '*')
 
-console.log (resultado)
-}
+//     console.log(resultado)
+// }
