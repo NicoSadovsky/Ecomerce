@@ -133,6 +133,75 @@ if ((bienvenidaPagina === 'home spray') || (bienvenidaPagina === 'Home spray') |
 
 }
 
+let cart = [];
+
+// agregar productos al carrito
+function addToCart(product) {
+  cart.push(product);
+  console.log("Producto agregado al carrito:", product);
+  
+  // Actualizar la lista del carrito y el total
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
+  cartItems.innerHTML = "";
+  let total = 0;
+  
+  cart.forEach((item) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = `${item.name}: $${item.price.toFixed(2)}`;
+    cartItems.appendChild(listItem);
+    total += item.price;
+  });
+  
+  cartTotal.textContent = total.toFixed(2);
+}
+
+// obtener detalles del producto
+function getProductDetails(productDiv) {
+  const productImage = productDiv.querySelector("img").src;
+  const productName = productDiv.querySelector("h3").innerText;
+  
+  // extraer el precio numérico del texto
+  const priceRegex = /Precio: \$([\d,.]+)/;
+  const productPriceText = productDiv.querySelector("p").innerText;
+  const productPriceMatch = priceRegex.exec(productPriceText);
+  const productPrice = parseFloat(productPriceMatch[1].replace(",", ""));
+  
+  return {
+    image: productImage,
+    name: productName,
+    price: productPrice,
+  };
+}
+
+// limpiar el carrito
+function clearCart() {
+  cart = [];
+  
+  // Actualizar la lista del carrito y el total para que estén vacíos
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
+  cartItems.innerHTML = "";
+  cartTotal.textContent = "0.00";
+}
+
+// botones "Agregar al carrito"
+const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+addToCartButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const productDiv = button.parentNode;
+    const product = getProductDetails(productDiv);
+    addToCart(product);
+  });
+});
+
+// botón "Limpiar carrito"
+const clearCartButton = document.getElementById("clearCartButton");
+clearCartButton.addEventListener("click", () => {
+  clearCart();
+});
+
+
 
 
 //Calculadora de productos a futuro (en este caso llevaria 2 velas...)

@@ -68,3 +68,59 @@ main {
     color: #fff;
     text-decoration: none;
 }
+
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  #searchInput {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    width: 300px;
+  }
+  
+  #searchButton {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #searchButton:hover {
+    background-color: #333;
+  }
+
+.carrito {
+    background-color: #cacaca;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carrito h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .carrito ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .carrito li {
+    margin-bottom: 5px;
+  }
+  
+  #cartTotal {
+    font-weight: bold;
+  }
+  

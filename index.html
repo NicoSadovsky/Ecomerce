@@ -18,6 +18,11 @@
             </ul>
         </div>
 
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar producto..." />
+            <button id="searchButton">Buscar</button>
+        </div>
+
     </header>
 
     <main>
@@ -25,54 +30,61 @@
             <img src="img/IMG-20230617-WA0019.jpg" alt="Difusores" />
             <h3>Difusor 125ml</h3>
             <p>Precio: $1500</p>
-            <button>Agregar al carrito</button>
+            <button class="add-to-cart-btn" data-product="1">Agregar al carrito</button>
         </div>
 
         <div class="productos">
             <img src="img/IMG-20230617-WA0016.jpg" alt="Velas" />
             <h3>Vela Madera</h3>
             <p>Precio: $1500</p>
-            <button>Agregar al carrito</button>
+            <button class="add-to-cart-btn" data-product="1">Agregar al carrito</button>
         </div>
 
         <div class="productos">
             <img src="img/IMG-20230617-WA0015.jpg" alt="Home Spray" />
             <h3>Home Spray</h3>
             <p>Precio: $1400</p>
-            <button>Agregar al carrito</button>
+            <button class="add-to-cart-btn" data-product="1">Agregar al carrito</button>
         </div>
         <div class="productos">
             <img src="img/IMG-20230617-WA0014.jpg" alt="Difusores" />
             <h3>Difusor 125ml</h3>
             <p>Precio: $1500</p>
-            <button>Agregar al carrito</button>
+            <button class="add-to-cart-btn" data-product="1">Agregar al carrito</button>
         </div>
         <div class="productos">
             <img src="img/IMG-20230617-WA0018.jpg" alt="Velas" />
             <h3>Vela Bubble</h3>
             <p>Precio: $1950</p>
-            <button>Agregar al carrito</button>
+            <button class="add-to-cart-btn" data-product="1">Agregar al carrito</button>
         </div>
         <div class="productos">
             <img src="img/IMG-20230617-WA0021.jpg" alt="Difusores" />
             <h3>Difusor 250ml</h3>
             <p>Precio: $2400</p>
-            <button>Agregar al carrito</button>
+            <button class="add-to-cart-btn" data-product="1">Agregar al carrito</button>
         </div>
         <div class="productos">
             <img src="img/IMG-20230617-WA0017.jpg" alt="Velas" />
             <h3>Vela Vaso</h3>
             <p>Precio: $1500</p>
-            <button>Agregar al carrito</button>
+            <button class="add-to-cart-btn" data-product="1">Agregar al carrito</button>
         </div>
     </main>
+    <div class="carrito">
+        <h2>Carrito de compras</h2>
+        <ul id="cartItems"></ul>
+        <p>Total: $<span id="cartTotal">0</span></p>
+        <button id="clearCartButton">Limpiar carrito</button>
+    </div>
+    
 
     <footer>
         <div class="footer">
             <p>Fiore di loto - Todos los derechos reservados</p>
         </div>
     </footer>
-    
+
     <script src="index.js"></script>
 </body>
 
